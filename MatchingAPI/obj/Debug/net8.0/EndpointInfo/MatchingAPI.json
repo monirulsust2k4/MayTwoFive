@@ -1,0 +1,3233 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MatchingAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/GetLoginOTP": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "mailAddress",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/BusinessTransaction/BusinessTransaction/CreateBusinessTransaction": {
+      "post": {
+        "tags": [
+          "BusinessTransaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBusinessTransactionDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBusinessTransactionDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBusinessTransactionDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/BusinessTransaction/BusinessTransaction/GetBusinessTransactionLandingPasignation": {
+      "get": {
+        "tags": [
+          "BusinessTransaction"
+        ],
+        "parameters": [
+          {
+            "name": "AccountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BusinessUnitId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "viewOrder",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PageNo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessTransactionLandingPagination"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessTransactionLandingPagination"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BusinessTransactionLandingPagination"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/BusinessTransaction/BusinessTransaction/EditBusinessTransaction": {
+      "put": {
+        "tags": [
+          "BusinessTransaction"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditBusinessTransactionDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditBusinessTransactionDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditBusinessTransactionDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CashJournal/CashJournal/CreateGeneralLedger": {
+      "post": {
+        "tags": [
+          "CashJournal"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CashJournalDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CashJournalDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CashJournalDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/CreateGeneralLedger": {
+      "post": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GeneralLedgerDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GeneralLedgerDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GeneralLedgerDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/EditGeneralLedger": {
+      "post": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditGeneralLedgerDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditGeneralLedgerDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditGeneralLedgerDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/GetGeneralLedgerById": {
+      "get": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "parameters": [
+          {
+            "name": "GLID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/GetGeneralLedgerDDL": {
+      "get": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "parameters": [
+          {
+            "name": "AccountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "GeneralLedgerTypeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/GetGeneralLedgerByCategoryDDL": {
+      "get": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "parameters": [
+          {
+            "name": "AccountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "GeneralLedgerCategoryId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BusinessUnitId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/DeleteAccountClass": {
+      "delete": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "parameters": [
+          {
+            "name": "ClassId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "ActionBy",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GeneralLedger/GeneralLedger/GetGeneralLedgerDDLByAccountGroup": {
+      "get": {
+        "tags": [
+          "GeneralLedger"
+        ],
+        "parameters": [
+          {
+            "name": "AccountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "BusinessUnitId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "AccountGroupId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetNotificationCount": {
+      "get": {
+        "tags": [
+          "Notification"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "accountId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Preference/Preference/CreateUserPreferenceInfo": {
+      "post": {
+        "tags": [
+          "Preference"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreferenceDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreferenceDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserPreferenceDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/CreateUserProfileInfo": {
+      "post": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/EditUserProfileInfo": {
+      "put": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileSummeryDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileSummeryDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfileSummeryDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/EditUserProfileEducationInfo": {
+      "put": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserEducationRowDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserEducationRowDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserEducationRowDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/EditUserProfileWorkInfo": {
+      "put": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserWorkInfoRowDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserWorkInfoRowDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserWorkInfoRowDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/EditUserHobbiesNInterestInfo": {
+      "put": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserRowDTO"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserRowDTO"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CreateUserRowDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomizeHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetSubcriptionPlanList": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetDivisionDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "parameters": [
+          {
+            "name": "CountryID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetDistrictDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "parameters": [
+          {
+            "name": "DivisionID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetThanaDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "parameters": [
+          {
+            "name": "DistrictID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetRegionDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetCommunityDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetCountryDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetDietPreferenceDDL": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetHightestQualification": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetHobbiesNInterest": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "parameters": [
+          {
+            "name": "CategoryName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetMaritalStatus": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetParentOccupation": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "parameters": [
+          {
+            "name": "strParentType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetResidencyStatus": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetSubCommunity": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "parameters": [
+          {
+            "name": "ReligiousID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetWorkDesignation": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ProfileInfo/ProfileInfo/GetWorkIndustry": {
+      "get": {
+        "tags": [
+          "ProfileInfo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Subscription/SucbcriptionPlan/CreateUpdateSubscriptionPlan": {
+      "post": {
+        "tags": [
+          "SucbcriptionPlan"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubscriptionPlanMainDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubscriptionPlanMainDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubscriptionPlanMainDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Subscription/SucbcriptionPlan/GetSubscriptionPlans": {
+      "get": {
+        "tags": [
+          "SucbcriptionPlan"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Subscription/SucbcriptionPlan/CreateSubscriptionPlanInformationByUser": {
+      "post": {
+        "tags": [
+          "SucbcriptionPlan"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSubscriptionPlanByUserCommonDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSubscriptionPlanByUserCommonDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSubscriptionPlanByUserCommonDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageHelper"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Subscription/SucbcriptionPlan/EditSubscriptionPlanByUser": {
+      "put": {
+        "tags": [
+          "SucbcriptionPlan"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditSubscriptionPlanByUserCommonDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditSubscriptionPlanByUserCommonDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditSubscriptionPlanByUserCommonDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Subscription/SucbcriptionPlan/GetRunningSusscriptionInfoForUser": {
+      "get": {
+        "tags": [
+          "SucbcriptionPlan"
+        ],
+        "parameters": [
+          {
+            "name": "userid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "unitid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "customerid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Subscription/SucbcriptionPlan/GetUserProfileInfo": {
+      "get": {
+        "tags": [
+          "SucbcriptionPlan"
+        ],
+        "parameters": [
+          {
+            "name": "intPartid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "intLoginUserId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "strWantsForGender",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "intCustomerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "intUnitId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "dteFromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "dteToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/UserProfileInformation/GetUserProfileInfo": {
+      "get": {
+        "tags": [
+          "UserProfileInformation"
+        ],
+        "parameters": [
+          {
+            "name": "intPartid",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "intLoginUserId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "strWantsForGender",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "intCustomerId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "intUnitId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "dteFromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "dteToDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BusinessTransactionLandingPagination": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BusinessTransactionLandingPaginationDTO"
+            },
+            "nullable": true
+          },
+          "currentPage": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BusinessTransactionLandingPaginationDTO": {
+        "type": "object",
+        "properties": {
+          "sl": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessTransactionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessTransactionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessTransactionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessUnitId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CashJournalDTO": {
+        "type": "object",
+        "properties": {
+          "objHeader": {
+            "$ref": "#/components/schemas/CreateCashJournalHeaderDTO"
+          },
+          "objRowList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateCashJournalRowDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateBusinessTransactionDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessUnitId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessTransactionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessTransactionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isInternalExpense": {
+            "type": "boolean"
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCashJournalHeaderDTO": {
+        "type": "object",
+        "properties": {
+          "cashJournalId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "cashJournalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "journalDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "accountId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessUnitId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sbuid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "receiveFrom": {
+            "type": "string",
+            "nullable": true
+          },
+          "transferTo": {
+            "type": "string",
+            "nullable": true
+          },
+          "paidTo": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "narration": {
+            "type": "string",
+            "nullable": true
+          },
+          "posted": {
+            "type": "boolean"
+          },
+          "partnerTypeId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "partnerTypeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessPartnerId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "businessPartnerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessPartnerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountingJournalTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "directPosting": {
+            "type": "boolean"
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "controlType": {
+            "type": "string",
+            "nullable": true
+          },
+          "costRevenueName": {
+            "type": "string",
+            "nullable": true
+          },
+          "costRevenueId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "elementName": {
+            "type": "string",
+            "nullable": true
+          },
+          "elementId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "attachment": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCashJournalRowDTO": {
+        "type": "object",
+        "properties": {
+          "rowId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "bankAccountId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "bankAccNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessTransactionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessTransactionCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessTransactionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "narration": {
+            "type": "string",
+            "nullable": true
+          },
+          "partnerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "partnerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "partnerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "partnerTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "partnerTypeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessPartnerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessPartnerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessPartnerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "subGLId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "subGlCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "subGLName": {
+            "type": "string",
+            "nullable": true
+          },
+          "subGLTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "subGLTypeName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSubscriptionPlanByUserCommonDTO": {
+        "type": "object",
+        "properties": {
+          "objHeaderDTO": {
+            "$ref": "#/components/schemas/CreateSubscriptionPlanByUserHeaderDTO"
+          },
+          "objListRowDTO": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateSubscriptionPlanByUserRowDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSubscriptionPlanByUserHeaderDTO": {
+        "type": "object",
+        "properties": {
+          "membershipId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "planId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastActionDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "serverDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "unitId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSubscriptionPlanByUserRowDTO": {
+        "type": "object",
+        "properties": {
+          "changeRequestId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "membershipId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentPlanId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentPlan": {
+            "type": "string",
+            "nullable": true
+          },
+          "requestedPlanId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "requestedPlan": {
+            "type": "string",
+            "nullable": true
+          },
+          "changeRequestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "changeProcessedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "changeStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonForChange": {
+            "type": "string",
+            "nullable": true
+          },
+          "adminNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "isChangeCompleted": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserEducationRowDTO": {
+        "type": "object",
+        "properties": {
+          "userProfessionDetId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "qualification": {
+            "type": "string",
+            "nullable": true
+          },
+          "institute": {
+            "type": "string",
+            "nullable": true
+          },
+          "sesson": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserRowDTO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "section": {
+            "type": "string",
+            "nullable": true
+          },
+          "hobbiesName": {
+            "type": "string",
+            "nullable": true
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "lastActionDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserWorkInfoRowDTO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "designationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "designationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "industryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "industryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "income": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isWork": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "fromDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "activeStatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomizeHelper": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "userCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "soId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "statuscode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditBusinessTransactionDTO": {
+        "type": "object",
+        "properties": {
+          "businessTransactionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "businessTransactionName": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isInternalExpense": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditGeneralLedgerDTO": {
+        "type": "object",
+        "properties": {
+          "generalLedgerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "accountId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditSubscriptionPlanByUserCommonDTO": {
+        "type": "object",
+        "properties": {
+          "objHeaderDTO": {
+            "$ref": "#/components/schemas/EditSubscriptionPlanByUserHeaderDTO"
+          },
+          "objListRowDTO": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EditSubscriptionPlanByUserRowDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditSubscriptionPlanByUserHeaderDTO": {
+        "type": "object",
+        "properties": {
+          "membershipId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "planId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastActionDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "serverDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "unitId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "customerId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditSubscriptionPlanByUserRowDTO": {
+        "type": "object",
+        "properties": {
+          "changeRequestId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "membershipId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentPlanId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currentPlan": {
+            "type": "string",
+            "nullable": true
+          },
+          "requestedPlanId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "requestedPlan": {
+            "type": "string",
+            "nullable": true
+          },
+          "changeRequestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "changeProcessedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "changeStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasonForChange": {
+            "type": "string",
+            "nullable": true
+          },
+          "adminNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "isChangeCompleted": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GeneralLedgerDTO": {
+        "required": [
+          "accountCategoryId",
+          "accountClassId",
+          "accountGroupId",
+          "accountId"
+        ],
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "accountGroupId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "accountClassId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "accountCategoryId": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64"
+          },
+          "generalLedgerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalLedgerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "glaccountTypeId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "glaccountTypeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "scheduleview": {
+            "type": "boolean"
+          },
+          "subglAllow": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MessageHelper": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "autoId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubscriptionPlanMainDTO": {
+        "type": "object",
+        "properties": {
+          "planId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "planName": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "duration": {
+            "type": "string",
+            "nullable": true
+          },
+          "profileVisibility": {
+            "type": "string",
+            "nullable": true
+          },
+          "isIncreasedMatchScore": {
+            "type": "boolean"
+          },
+          "numberOfMatches": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "messageLimit": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isAccessToPremiumProfiles": {
+            "type": "boolean"
+          },
+          "isPrioritySupport": {
+            "type": "boolean"
+          },
+          "isAccessToAdvancedFilters": {
+            "type": "boolean"
+          },
+          "discountPercentage": {
+            "type": "number",
+            "format": "double"
+          },
+          "additionalBenefits": {
+            "type": "string",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "lastActionDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "serverDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "actionBy": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferenceDTO": {
+        "type": "object",
+        "properties": {
+          "usererenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unitId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ageMin": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ageMax": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "decHeightMin": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "decHeightMax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "maritalStatusId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "religionId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "isCommunitPreperence": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "communityId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "subCommunityId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "districtId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "thanaId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "residencyStatusId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "highestQualificationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "workDesignationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "workIndustryId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "decAnnualIncomeMin": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "decAnnualIncomeMax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "strDiet": {
+            "type": "string",
+            "nullable": true
+          },
+          "strHobbiesAndInterests": {
+            "type": "string",
+            "nullable": true
+          },
+          "motherOccupationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "fatherOccupationId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "noOfSisters": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "noOfBrothers": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "dteCreatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dteUpdatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "strGender": {
+            "type": "string",
+            "nullable": true
+          },
+          "communityROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredCommunityDTO"
+            },
+            "nullable": true
+          },
+          "countryROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredCountryDTO"
+            },
+            "nullable": true
+          },
+          "dietROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredDietDTO"
+            },
+            "nullable": true
+          },
+          "hobbyROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredHobbyDTO"
+            },
+            "nullable": true
+          },
+          "maritalStatusROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredMaritalStatusDTO"
+            },
+            "nullable": true
+          },
+          "occupationROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredParentOccupationDTO"
+            },
+            "nullable": true
+          },
+          "qualificationROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredQualificationDTO"
+            },
+            "nullable": true
+          },
+          "residencyStatusROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredResidencyStatusDTO"
+            },
+            "nullable": true
+          },
+          "subCommunityROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredSubCommunityDTO"
+            },
+            "nullable": true
+          },
+          "workDesignationROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredWorkDesignationDTO"
+            },
+            "nullable": true
+          },
+          "workIndustryROW": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserPreferredWorkIndustryDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredCommunityDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intCommunityId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredCountryDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intCountryId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredDietDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intDietId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredHobbyDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intHobbyId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredMaritalStatusDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intMaritalStatusId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredParentOccupationDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intOccupationId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "intFamilyMemberTypeId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredQualificationDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intQualificationId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredResidencyStatusDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intResidencyId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredSubCommunityDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intSubCommunityId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredWorkDesignationDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intDesignationId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserPreferredWorkIndustryDTO": {
+        "type": "object",
+        "properties": {
+          "intId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intUserPreferenceId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "intWorkIndustryId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserProfileDTO": {
+        "required": [
+          "strName"
+        ],
+        "type": "object",
+        "properties": {
+          "strName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "dteDateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "strPresentAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "strPermanentAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "intReligionID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "strEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "strMobileNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "intCommunityID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intCountryID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "strCountryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "strProfileFor": {
+            "type": "string",
+            "nullable": true
+          },
+          "strGender": {
+            "type": "string",
+            "nullable": true
+          },
+          "intDistrictID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intThanaID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intResidencyStatusID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intSubCommunityID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isPartnerCommunityPreference": {
+            "type": "boolean"
+          },
+          "intMaritalStatusID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "decHeight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "strDiet": {
+            "type": "string",
+            "nullable": true
+          },
+          "intHighestQualificationID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "strCollege": {
+            "type": "string",
+            "nullable": true
+          },
+          "strHobbiesAndInterests": {
+            "type": "string",
+            "nullable": true
+          },
+          "decAnnualIncome": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "intWorkDesignationID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intWorkIndustryID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intMotherOccupationID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intFatherDetailsID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intNoOfSisters": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intNoOfBrothers": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intUnitId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dteLastActionDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isApprove": {
+            "type": "boolean"
+          },
+          "dteApproveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "intApproveBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "serviceRows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateUserRowDTO"
+            },
+            "nullable": true
+          },
+          "educationRows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateUserEducationRowDTO"
+            },
+            "nullable": true
+          },
+          "workInfoRows": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CreateUserWorkInfoRowDTO"
+            },
+            "nullable": true
+          },
+          "isUpdateEducationInfo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isUpdateWorkInfo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isUpdateHobbiesInfo": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserProfileSummeryDTO": {
+        "required": [
+          "strName"
+        ],
+        "type": "object",
+        "properties": {
+          "strName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "userID": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "dteDateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "strPresentAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "strPermanentAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "intReligionID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "strEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "strMobileNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "intCommunityID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intCountryID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "strCountryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "strProfileFor": {
+            "type": "string",
+            "nullable": true
+          },
+          "strGender": {
+            "type": "string",
+            "nullable": true
+          },
+          "intDistrictID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intThanaID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intResidencyStatusID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intSubCommunityID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isPartnerCommunityPreference": {
+            "type": "boolean"
+          },
+          "intMaritalStatusID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "decHeight": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "strDiet": {
+            "type": "string",
+            "nullable": true
+          },
+          "intHighestQualificationID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "strCollege": {
+            "type": "string",
+            "nullable": true
+          },
+          "strHobbiesAndInterests": {
+            "type": "string",
+            "nullable": true
+          },
+          "decAnnualIncome": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "intWorkDesignationID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intWorkIndustryID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intMotherOccupationID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intFatherDetailsID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intNoOfSisters": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intNoOfBrothers": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "intUnitId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dteLastActionDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isApprove": {
+            "type": "boolean"
+          },
+          "dteApproveDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "intApproveBy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isUpdateEducationInfo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isUpdateWorkInfo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "isUpdateHobbiesInfo": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
