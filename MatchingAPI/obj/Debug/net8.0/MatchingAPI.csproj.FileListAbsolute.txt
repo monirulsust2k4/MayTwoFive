@@ -349,6 +349,7 @@ D:\matching\MatchingAPI\MatchingAPI\obj\Debug\net8.0\MatchingAPI.AssemblyInfo.cs
 D:\matching\MatchingAPI\MatchingAPI\obj\Debug\net8.0\MatchingAPI.csproj.CoreCompileInputs.cache
 D:\matching\MatchingAPI\MatchingAPI\obj\Debug\net8.0\MatchingAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\matching\MatchingAPI\MatchingAPI\obj\Debug\net8.0\MatchingAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\matching\MatchingAPI\MatchingAPI\obj\Debug\net8.0\MatchingAPI.sourcelink.json
 D:\matching\MatchingAPI\MatchingAPI\bin\Debug\net8.0\appsettings.Development.json
 D:\matching\MatchingAPI\MatchingAPI\bin\Debug\net8.0\appsettings.json
 D:\matching\MatchingAPI\MatchingAPI\bin\Debug\net8.0\MatchingAPI.staticwebassets.endpoints.json
